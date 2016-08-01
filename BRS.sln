@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRS", "BRS\BRS.csproj", "{B6761793-0F50-47A9-9C2E-FAF972EE2614}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRS.Web", "BRS\BRS.Web.csproj", "{B6761793-0F50-47A9-9C2E-FAF972EE2614}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRS.Data", "BRS.Data\BRS.Data.csproj", "{003FBA60-4280-48D9-8E3D-2AC5A4FAC3BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRS.Models", "BRS.Models\BRS.Models.csproj", "{4686A74B-A1B7-4E04-85ED-DC7F58DF3C21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B6761793-0F50-47A9-9C2E-FAF972EE2614}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6761793-0F50-47A9-9C2E-FAF972EE2614}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6761793-0F50-47A9-9C2E-FAF972EE2614}.Release|Any CPU.Build.0 = Release|Any CPU
+		{003FBA60-4280-48D9-8E3D-2AC5A4FAC3BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{003FBA60-4280-48D9-8E3D-2AC5A4FAC3BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{003FBA60-4280-48D9-8E3D-2AC5A4FAC3BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{003FBA60-4280-48D9-8E3D-2AC5A4FAC3BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4686A74B-A1B7-4E04-85ED-DC7F58DF3C21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4686A74B-A1B7-4E04-85ED-DC7F58DF3C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4686A74B-A1B7-4E04-85ED-DC7F58DF3C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4686A74B-A1B7-4E04-85ED-DC7F58DF3C21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
