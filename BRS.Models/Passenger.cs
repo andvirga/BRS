@@ -12,6 +12,10 @@ namespace BRS.Models
     /// </summary>
     public class Passenger : Person
     {
+        public int PassengerId { get; set; }
 
+        public List<Travel> Travels { get; set; }
+
+        public string Observations { get; set; }
     }
 }

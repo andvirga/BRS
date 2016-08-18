@@ -12,7 +12,7 @@ namespace BRS.Models
     /// </summary>
     public class Destination
     {
-        public int Id { get; set; }
+        public int DestinationId { get; set; }
 
         [Required]
         public string DestinationName { get; set; }
