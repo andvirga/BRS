@@ -12,6 +12,8 @@ namespace BRS.Models
     /// </summary>
     public class Passenger : Person
     {
+        public int PassengerId { get; set; }
 
+        public string TravelHistory { get; set; }
     }
 }

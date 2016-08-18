@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4686A74B-A1B7-4E04-85ED-DC7F58DF3C21}</ProjectGuid>
+    <ProjectGuid>{7B44A78B-757E-41DB-86A9-065ECF34DDBF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BRS.Models</RootNamespace>
-    <AssemblyName>BRS.Models</AssemblyName>
+    <RootNamespace>BRS.Logic</RootNamespace>
+    <AssemblyName>BRS.Logic</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,7 +31,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,21 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusDriver.cs" />
-    <Compile Include="Coordinator.cs" />
-    <Compile Include="Destination.cs" />
-    <Compile Include="Passenger.cs" />
-    <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Province.cs" />
-    <Compile Include="Travel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BRS.Data\BRS.Data.csproj">
+      <Project>{003FBA60-4280-48D9-8E3D-2AC5A4FAC3BD}</Project>
+      <Name>BRS.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BRS.Interfaces\BRS.Interfaces.csproj">
       <Project>{ea085277-6c58-4dc0-b7e0-9b42d8dd099e}</Project>
       <Name>BRS.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -8,6 +8,6 @@ namespace BRS.Models
 {
     public class Coordinator : Person
     {
-
+        public int CoordinatorId { get; set; }
     }
 }

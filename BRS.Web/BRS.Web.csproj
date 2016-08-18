@@ -247,6 +247,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Passenger\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -255,6 +256,24 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BRS.Data\BRS.Data.csproj">
+      <Project>{003fba60-4280-48d9-8e3d-2ac5a4fac3bd}</Project>
+      <Name>BRS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BRS.Interfaces\BRS.Interfaces.csproj">
+      <Project>{ea085277-6c58-4dc0-b7e0-9b42d8dd099e}</Project>
+      <Name>BRS.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BRS.Logic\BRS.Logic.csproj">
+      <Project>{7b44a78b-757e-41db-86a9-065ecf34ddbf}</Project>
+      <Name>BRS.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BRS.Models\BRS.Models.csproj">
+      <Project>{4686a74b-a1b7-4e04-85ed-dc7f58df3c21}</Project>
+      <Name>BRS.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

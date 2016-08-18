@@ -8,5 +8,6 @@ namespace BRS.Models
 {
     public class BusDriver : Person
     {
+        public int BusDriverId { get; set; }
     }
 }
