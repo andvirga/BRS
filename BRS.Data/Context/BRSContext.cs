@@ -25,5 +25,7 @@ namespace BRS.Data.Context
         public IDbSet<Travel> TravelContext { get; set; }
 
         #endregion
+
+        public System.Data.Entity.DbSet<BRS.Models.Passenger> Passengers { get; set; }
     }
 }

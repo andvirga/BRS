@@ -38,7 +38,16 @@ namespace BRS.Data.Repository
 
         #endregion
 
-        #region Base CRUD Methods
+        #region Base CRUD Sync Methods
+
+        public List<TEntity> GetAll()
+        {
+            return this.Context.Set<TEntity>().ToList();
+        }
+
+        #endregion
+
+        #region Base CRUD Async Methods
 
         public virtual async Task<List<TEntity>> GetAllAsync()
         {
