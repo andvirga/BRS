@@ -14,18 +14,17 @@ namespace BRS.Data.Context
         /// <summary>
         /// Passenger DB Context
         /// </summary>
-        public IDbSet<BusDriver> BusDriverContext { get; set; }
+        public DbSet<BusDriver> BusDriverContext { get; set; }
 
-        public IDbSet<Coordinator> CoordinatorContext { get; set; }
+        public DbSet<Coordinator> CoordinatorContext { get; set; }
 
-        public IDbSet<Destination> DestinationContext { get; set; }
+        public DbSet<Destination> DestinationContext { get; set; }
 
-        public IDbSet<Passenger> PassengerContext { get; set; }
+        public DbSet<Passenger> PassengerContext { get; set; }
 
-        public IDbSet<Travel> TravelContext { get; set; }
+        public DbSet<Travel> TravelContext { get; set; }
 
         #endregion
 
-        public System.Data.Entity.DbSet<BRS.Models.Passenger> Passengers { get; set; }
     }
 }
