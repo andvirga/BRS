@@ -59,9 +59,15 @@ namespace BRS.Data.Repository
             return await this.Context.Set<TEntity>().FindAsync(id);
         }
 
-        public virtual async Task SaveAsync(TEntity entity)
+        public virtual async Task CreateAsync(TEntity entity)
         {
             this.Context.Set<TEntity>().Add(entity);
+            await this.Context.SaveChangesAsync();
+        }
+
+        public virtual async Task UpdateAsync(TEntity entity)
+        {
+            this.Context.Entry<TEntity>(entity).State = EntityState.Modified;
             await this.Context.SaveChangesAsync();
         }
 

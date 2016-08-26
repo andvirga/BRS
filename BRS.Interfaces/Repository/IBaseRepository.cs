@@ -16,7 +16,7 @@ namespace BRS.Interfaces.Repository
 
         Task<TEntity> FindByIdAsync(int id);
 
-        Task SaveAsync(TEntity entity);
+        Task CreateAsync(TEntity entity);
 
         Task DeleteAsync(TEntity entity);
     }

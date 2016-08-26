@@ -11,11 +11,11 @@ using System.Web.Http.Results;
 
 namespace BRS.Web.Controllers
 {
-    public class PassengerController : ApiController
+    public class PassengerAPIController : ApiController
     {
         private PassengerRepository repository { get; set; }
 
-        public PassengerController()
+        public PassengerAPIController()
         {
             this.repository = new PassengerRepository();
         }
@@ -43,7 +43,7 @@ namespace BRS.Web.Controllers
 
             try
             {
-                await this.repository.SaveAsync(p);
+                await this.repository.CreateAsync(p);
                 return Ok();
             }
             catch (Exception e)
