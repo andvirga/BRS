@@ -14,6 +14,7 @@ namespace BRS.Models
     {
         public int PassengerId { get; set; }
 
+        [Display(Name = "Historial de Viajes")]
         public string TravelHistory { get; set; }
     }
 }

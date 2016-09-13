@@ -18,14 +18,6 @@
         @Html.HiddenFor(model => model.PassengerId)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TravelHistory, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TravelHistory, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TravelHistory, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
             @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
@@ -52,7 +44,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.DayOfBirth, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.DayOfBirth, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextBoxFor(model => model.DayOfBirth, new { htmlAttributes = new { @class = "form-control datefield" } })
                 @Html.ValidationMessageFor(model => model.DayOfBirth, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -118,6 +110,14 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TravelHistory, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TravelHistory, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TravelHistory, "", new { @class = "text-danger" })
             </div>
         </div>
 
