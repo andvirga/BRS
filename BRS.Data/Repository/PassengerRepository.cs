@@ -1,6 +1,7 @@
 ﻿using BRS.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,17 +10,19 @@ namespace BRS.Data.Repository
 {
     public class PassengerRepository : BaseRepository<Passenger>
     {
-        #region Custom Methods
-
-        public Passenger GetPassengerByDNI(string DNI)
+        public override List<Passenger> GetAll()
         {
-            var passengerList = this.GetAll();
-
-            var passenger = passengerList.Where(p => p.DNI == DNI).FirstOrDefault();
-
-            return passenger;
+            return base.Context.Set<Passenger>().Include("Person").ToList();
         }
 
-        #endregion
+        public override Task<List<Passenger>> GetAllAsync()
+        {
+            return base.Context.Set<Passenger>().Include("Person").ToListAsync();
+        }
+
+        public override Task<Passenger> FindByIdAsync(int id)
+        {
+            return base.Context.Set<Passenger>().Include("Person").Where(p => p.PersonId == id).SingleOrDefaultAsync();
+        }
     }
 }

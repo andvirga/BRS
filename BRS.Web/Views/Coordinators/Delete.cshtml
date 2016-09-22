@@ -1,0 +1,120 @@
+﻿@model BRS.Models.Coordinator
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Coordinator</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.DNI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.DNI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.DayOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.DayOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.PrimaryAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.PrimaryAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.SecondaryAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.SecondaryAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.PrimaryPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.PrimaryPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.SecondaryPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.SecondaryPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.Province)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.Province)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.Country)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

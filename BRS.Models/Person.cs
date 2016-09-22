@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace BRS.Models
 {
-    public abstract class Person
+    public class Person
     {
+        public int PersonID { get; set; }
+
         [Display(Name = "Nombre")]
         [Required]
         public string FirstName { get; set; }

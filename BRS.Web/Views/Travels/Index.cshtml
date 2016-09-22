@@ -1,0 +1,57 @@
+﻿@model IEnumerable<BRS.Models.Travel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BusDriver.BusDriverId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Coordinator.CoordinatorId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Destination.DestinationName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartureTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReturnTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BusDriver.BusDriverId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Coordinator.CoordinatorId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Destination.DestinationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartureTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReturnTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TravelId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TravelId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TravelId })
+        </td>
+    </tr>
+}
+
+</table>

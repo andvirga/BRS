@@ -26,5 +26,6 @@ namespace BRS.Data.Context
 
         #endregion
 
+        public System.Data.Entity.DbSet<BRS.Models.Person> People { get; set; }
     }
 }

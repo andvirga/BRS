@@ -23,7 +23,9 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Pasajeros", "Index", "Passengers")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Coordinadores", "Index", "Coordinators")</li>
+                    <li>@Html.ActionLink("Choferes", "Index", "BusDrivers")</li>
+                    <li>@Html.ActionLink("Viajes", "Index", "Travels")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -39,6 +41,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/PortalScripts/js")
     @RenderSection("scripts", required: false)
 </body>
 </html>

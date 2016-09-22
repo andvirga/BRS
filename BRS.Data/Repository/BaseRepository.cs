@@ -40,7 +40,7 @@ namespace BRS.Data.Repository
 
         #region Base CRUD Sync Methods
 
-        public List<TEntity> GetAll()
+        public virtual List<TEntity> GetAll()
         {
             return this.Context.Set<TEntity>().ToList();
         }
@@ -84,5 +84,6 @@ namespace BRS.Data.Repository
         }
 
         #endregion
+
     }
 }

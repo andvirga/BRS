@@ -31,9 +31,9 @@ namespace BRS.Web.Controllers
         #endregion
 
         // GET: Passengers
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            return View(repository.GetAll());
+            return View(await repository.GetAllAsync());
         }
 
         // GET: Passengers/Details/5

@@ -12,50 +12,50 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.FirstName)
+            @Html.DisplayNameFor(model => model.Person.FirstName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LastName)
+            @Html.DisplayNameFor(model => model.Person.LastName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DNI)
+            @Html.DisplayNameFor(model => model.Person.DNI)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PrimaryAddress)
+            @Html.DisplayNameFor(model => model.Person.PrimaryAddress)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PrimaryPhone)
+            @Html.DisplayNameFor(model => model.Person.PrimaryPhone)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Email)
+            @Html.DisplayNameFor(model => model.Person.Email)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.City)
+            @Html.DisplayNameFor(model => model.Person.City)
         </th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
+            @Html.DisplayFor(modelItem => item.Person.FirstName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.LastName)
+            @Html.DisplayFor(modelItem => item.Person.LastName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DNI)
+            @Html.DisplayFor(modelItem => item.Person.DNI)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.PrimaryAddress)
+            @Html.DisplayFor(modelItem => item.Person.PrimaryAddress)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.PrimaryPhone)
+            @Html.DisplayFor(modelItem => item.Person.PrimaryPhone)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Email)
+            @Html.DisplayFor(modelItem => item.Person.Email)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.City)
+            @Html.DisplayFor(modelItem => item.Person.City)
         </td>
         <td>
             @Html.ActionLink("Editar", "Edit", new { id=item.PassengerId }) |
