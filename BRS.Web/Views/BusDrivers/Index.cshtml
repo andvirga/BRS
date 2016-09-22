@@ -1,33 +1,69 @@
 ﻿@model IEnumerable<BRS.Models.BusDriver>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Choferes";
 }
 
-<h2>Index</h2>
+<h2>Lista de @ViewBag.Title</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear Nuevo", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Person.FirstName)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.Person.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Person.DNI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Person.PrimaryAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Person.PrimaryPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Person.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Person.City)
+        </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Person.FirstName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BusDriverId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.BusDriverId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.BusDriverId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.DNI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.PrimaryAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.PrimaryPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.City)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.BusDriverId }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.BusDriverId }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.BusDriverId })
+            </td>
+        </tr>
+    }
 
 </table>

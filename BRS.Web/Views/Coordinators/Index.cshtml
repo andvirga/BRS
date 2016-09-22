@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<BRS.Models.Coordinator>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Coordinadores";
 }
 
-<h2>Index</h2>
+<h2>Lista de @ViewBag.Title</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear Nuevo", "Create")
 </p>
 <table class="table">
     <tr>
@@ -21,19 +21,10 @@
             @Html.DisplayNameFor(model => model.Person.DNI)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Person.DayOfBirth)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Person.PrimaryAddress)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Person.SecondaryAddress)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Person.PrimaryPhone)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Person.SecondaryPhone)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Person.Email)
@@ -41,59 +32,38 @@
         <th>
             @Html.DisplayNameFor(model => model.Person.City)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Person.Province)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Person.Country)
-        </th>
-        <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Person.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Person.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Person.DNI)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Person.DayOfBirth)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Person.PrimaryAddress)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Person.SecondaryAddress)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Person.PrimaryPhone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Person.SecondaryPhone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Person.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Person.City)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Person.Province)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Person.Country)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CoordinatorId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CoordinatorId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CoordinatorId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.DNI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.PrimaryAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.PrimaryPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person.City)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.CoordinatorId }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.CoordinatorId }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.CoordinatorId })
+            </td>
+        </tr>
+    }
 
 </table>

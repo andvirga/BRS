@@ -1,3 +1,3 @@
-﻿//(function() {
-//    $("#datepicker" ).datepicker();
-//})();
+﻿(function() {
+    $("#birthDayDdl.input-group.date").datepicker({});
+})();
