@@ -1,3 +1,7 @@
 ﻿(function() {
-    $("#birthDayDdl.input-group.date").datepicker({});
+    $("#datepickerContainer").datepicker({
+        weekStart: 7,
+        language: "es",
+        orientation: "bottom left"
+    });
 })();

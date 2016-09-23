@@ -21,7 +21,8 @@ namespace BRS.Web
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js",
+                      "~/Scripts/bootstrap-datepicker.min.js"));
 
             bundles.Add(new ScriptBundle("~/PortalScripts/js").IncludeDirectory("~/Views", "*.js", true));
 

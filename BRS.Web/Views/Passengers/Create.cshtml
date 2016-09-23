@@ -51,10 +51,13 @@
             <div class="col-xs-12 col-md-6">
                 <div class="form-group">
                     @Html.LabelFor(model => model.Person.DayOfBirth, htmlAttributes: new { @class = "control-label col-md-4" })
-                    <div class="col-md-8">
-                        @Html.EditorFor(model => model.Person.DayOfBirth, new { htmlAttributes = new { @id="birthDayDdl", @class = "form-control input-group date" } })
-                        @Html.ValidationMessageFor(model => model.Person.DayOfBirth, "", new { @class = "text-danger" })
+                    <div class="col-md-8 ">
+                        <div class="input-group date" id="datepickerContainer">
+                            @Html.EditorFor(model => model.Person.DayOfBirth, new { htmlAttributes = new { @class = "form-control" } })
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                        </div>
                     </div>
+                    @Html.ValidationMessageFor(model => model.Person.DayOfBirth, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
@@ -148,7 +151,7 @@
                 <div class="form-group">
                     @Html.LabelFor(model => model.TravelHistory, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
-                        @Html.EditorFor(model => model.TravelHistory, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.EditorFor(model => model.TravelHistory, new { htmlAttributes = new { @class = "form-control travel-history" } })
                         @Html.ValidationMessageFor(model => model.TravelHistory, "", new { @class = "text-danger" })
                     </div>
                 </div>
